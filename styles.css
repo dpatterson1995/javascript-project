@@ -1,0 +1,25 @@
+body {
+    background-color: goldenrod;
+}
+
+.navbar-brand{
+    color: goldenrod;
+    
+}
+.nav-item {
+    color:goldenrod
+}
+
+.card {
+    text-align: center;
+    margin: 10px;
+    border-radius: 50px;
+    display: flex;
+}
+
+h1 {
+    color: blue;
+}
+
+
+

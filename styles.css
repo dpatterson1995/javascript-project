@@ -2,6 +2,12 @@ body {
     background-color: goldenrod;
 }
 
+.Webpage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .navbar-brand{
     color: goldenrod;
     
@@ -21,5 +27,19 @@ h1 {
     color: blue;
 }
 
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50px;
+}
 
+.card-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
 
+#number {
+    margin-top: 20px;
+    width: 80px;
+}

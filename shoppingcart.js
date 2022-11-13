@@ -19,13 +19,23 @@ for (let i = 0; i < addToCartButtons.length; i++) {
     }
     updateCartTotal();
   }
+
+  // not working correctly yet
 function addToCartClicked(event){
   let button = event.target;
-  let product = document.getElementsByClassName('product-category');
-  let itemName = document.getElementsByClassName('card-title');
-  let itemPrice = document.getElementsByClassName('item-price');
+  let product = document.getElementsByClassName('product-category')[0].innerText;
+  let itemName = document.getElementsByClassName('card-title')[0].innerTexxt;
+  let itemPrice = document.getElementsByClassName('item-price')[0].innerText;
  
+  addItemToCart(product, itemName, itemPrice);
+}
 
+function addItemToCart(product, itemName, itemPrice){
+  let cartRow = document.createElement('div');
+  let cartItems = document.getElementsByClassName('cart-items')[0];
+  let cartRowContents = product + itemName + itemPrice;
+  cartRow.innerText = cartRowContents;
+  cartItems.append(cartRow)
 }
 
 function updateCartTotal() {

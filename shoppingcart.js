@@ -1,9 +1,9 @@
-let removeCartItemsButtons = document.getElementsByClassName("btn-danger");
-console.log(removeCartItemsButtons);
-for (let i = 0; i < removeCartItemsButtons.length; i++) {
-  let button = removeCartItemsButtons[i];
-  button.addEventListener("click", removeCartItem); 
-}
+// let removeCartItemsButtons = document.getElementsByClassName("btn-danger");
+
+// for (let i = 0; i < removeCartItemsButtons.length; i++) {
+//   let button = removeCartItemsButtons[i];
+//   button.addEventListener("click", removeCartItem); 
+// }
 
 let quantityInputs = document.getElementsByClassName('cart-quantity-input');
 for (let i = 0; i < quantityInputs.length; i++){
@@ -11,11 +11,11 @@ for (let i = 0; i < quantityInputs.length; i++){
     input.addEventListener('change', quantityChanged);
 }
 
-function removeCartItem(event){
-    let buttonClicked = event.target;
-    buttonClicked.parentElement.parentElement.remove();
-    updateCartTotal();
-  }
+// function removeCartItem(event){
+//     let buttonClicked = event.target;
+//     buttonClicked.parentElement.parentElement.remove();
+//     updateCartTotal();
+//   }
 
   function quantityChanged(event){
     let input = event.target

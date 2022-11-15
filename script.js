@@ -4,7 +4,7 @@ console.log(carts);
 let products=[
    { 
     name: 'Bread', 
-    tag: "Pantry", 
+    tag: 'Pantry', 
     price: 1.99, 
     salestax: false, 
     inCart: 0
@@ -79,6 +79,7 @@ for(let i = 0; i < carts.length; i++){
     carts[i].addEventListener('click', () => { 
     console.log('clicked');
     cartNumbers(products[i]);
+    totalCost(products[i])
 })
 }
 
@@ -107,23 +108,43 @@ function cartNumbers(product){
     setItems(product);
 }
 
-function setItems(product){
+function setItems(product) {
 let cartItems= localStorage.getItem('productsInCart');
-cartItems = JSON.parse(cartItems);
-console.log("My cartItems are", cartItems);
+console.log("My cartItems are (beofre parse)", cartItems);
 
+cartItems= JSON.parse(cartItems);
+console.log("My cartItems are", cartItems);
 if(cartItems != null){
- cartItems[products.tag].inCart +=1;
-}else{
+    if(cartItems[product.tag] == undefined) {
+        cartItems = {
+            ...cartItems,
+            [product.tag]: product
+        }
+    }
+    cartItems[product.tag].inCart += 1;
+} else{
 product.inCart = 1;
 cartItems = {
-        [product.tag]:product}
+        [product.tag]: product
+    }
 }
     
-localStorage.setItem("productsInCart", JSON.stringify
-(cartItems));
+localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+}
+
+function totalCost(product){
+    console.log("The product price is", product.price);
+    let cartCost = localStorage.getItem('totalCost');
+    
+    console.log("My cartCost is", cartCost);
+    console.log(typeof cartCost);
+    if(cartCost != null) {
+        cartCost = parseInt(cartCost);
+        localStorage.setItem("totalCost", cartCost + product.price);
+    }else{
+        localStorage.setItem("totalCost", product.price);
+    }
+
 }
 
 onLoadCartNumbers();
-
-    

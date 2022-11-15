@@ -1,6 +1,9 @@
 let carts = document.getElementsByClassName("addToCart")
 console.log(carts);
 
+//maybe have an empty array to signify their cart?
+let userCart = [];
+
 let products=[
    { 
     name: 'Bread', 
@@ -90,6 +93,7 @@ function onLoadCartNumbers(){
 
 }
 
+//WOW LOCAL STORAGE?! Neat.
 function cartNumbers(){
     let productNumbers = localStorage.getItem('cartNumbers');
 
@@ -108,4 +112,24 @@ function cartNumbers(){
 
 onLoadCartNumbers();
 
-    
+ //EXAMPLE CODE
+//Do you follow my logic?
+function addToCart(event){
+   //dataset.id gets that data-id from the html tag!
+   let id = event.target.dataset.id;
+   
+   //get all the quantities
+   let quantityInputs = document.querySelector('.cart-quantity-input');
+   
+   //find the one with the matching id
+   let currentItemQuantity = quantityInputs.find((x) => x.dataset.id === id);
+   
+   let quantity = currentItemQuantity.value;
+   
+   let item = products.find((x) => x.id === id);
+   
+   for(let i = 0; i < quantity; i++){
+      userCart.push(item);
+   }
+   
+}

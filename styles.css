@@ -51,6 +51,25 @@ img {
   box-shadow: 0px 25px 40px #1687d933;
 }
 
+#nav-footer {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+li {
+  padding: 5px;
+}
+
+#copyright {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 10px;
+}
+footer {
+  background-color: black;
+}
+
 @media screen and (min-width: 768px) {
   body {
     background-color: goldenrod;

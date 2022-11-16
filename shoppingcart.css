@@ -62,3 +62,10 @@ ul {
     padding: 5px;
   }
 }
+/* Start -- Data loaded into Shopping Cart */
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50px;
+}
+/* End -- Data loaded into Shopping Cart */

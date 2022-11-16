@@ -51,6 +51,24 @@ img {
   box-shadow: 0px 25px 40px #1687d933;
 }
 
+.closeIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+
+.rightArrow {
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+}
+
+.leftArrow {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+
 #nav-footer {
   list-style: none;
   display: flex;

@@ -26,15 +26,16 @@ function quantityChanged(event) {
 }
 
 function updateCartTotal() {
-  let cartItemContainer = document.getElementsByClassName("cart-items")[0];
+  let cartItemContainer = document.getElementsByClassName("cart-items")[i];
   let cartRows = cartItemContainer.getElementsByClassName("cart-row");
   let total = 0;
   for (let i = 0; i < cartRows.length; i++) {
     let cartRow = cartRows[i];
-    let priceElement = cartRow.getElementsByClassName("cart-price")[0];
-    let quantityElement = cartRow.getElementsByClassName(
-      "cart-quantity-input"
-    )[0];
+
+
+    let priceElement = cartRow.getElementsByClassName("cart-price")[i];
+    let quantityElement = cartRow.getElementsByClassName("cart-quantity-input")[i];
+
 
     let price = parseFloat(priceElement.innerText.replace("$", ""));
 

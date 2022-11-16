@@ -46,32 +46,55 @@ function updateCartTotal() {
     "$" + total;
 }
 
-const purchase = document.querySelector("#buy");
-const resultDiv = document.querySelector("#result");
-
-purchase.addEventListener("click", purchaseButton);
-
-function purchaseButton(event) {
-  let cash = document.createElement("button");
-  let card = document.createElement("button");
-  cash.classList.add("cashButton");
-  cash.appendChild;
-  card.classList.add("creditButton");
-  card.appendChild;
-
-  cash.innerText = "Cash";
-  card.innerText = "Credit Card";
-
-  resultDiv.append(cash);
-  resultDiv.append(card);
-}
-
-let cash = document.querySelector(".cashButton");
+//cash button
+let cash = document.querySelector("#cash");
+//credit button
+let credit = document.querySelector("#credit");
+//cash form
 let cashShow = document.querySelector("#cashForm");
+//credit form
+let creditShow = document.querySelector("#creditForm");
+//purchase button
+let buy = document.querySelector("#buy");
+
+buy.addEventListener("click", purchase);
+
+buy.addEventListener("click", purchase2);
+
+cash.addEventListener("click", cashButton);
+
+credit.addEventListener("click", creditButton);
 
 cashShow.addEventListener("click", cashButton);
-cash.addEventListener("click", cashButton);
+
+creditShow.addEventListener("click", creditButton);
+
 function cashButton(event) {
-  cashShow.classList.add("show");
+  event.preventDefault();
+  cashShow.classList.remove("form-check");
   cashShow.appendChild;
+
+  creditShow.classList.add("form-check");
+  creditShow.appendChild;
+}
+
+function creditButton(event) {
+  event.preventDefault();
+  creditShow.classList.remove("form-check");
+  creditShow.appendChild;
+
+  cashShow.classList.add("form-check");
+  cashShow.appendChild;
+}
+
+function purchase(event) {
+  event.preventDefault();
+  let remove = document.getElementById("cash");
+  remove.classList.remove("hide");
+}
+
+function purchase2(event) {
+  event.preventDefault();
+  let remove = document.getElementById("credit");
+  remove.classList.remove("hide");
 }

@@ -116,7 +116,30 @@ function displayCart(){
 
 }
 
+// displayCartItems()
 
+let cashButton = document.getElementById('cash');
+let creditButton = document.getElementById('credit');
+
+let cashPayment = document.getElementById('cash-info');
+let creditPayment = document.getElementById('credit-info');
+
+cashPayment.style.display = "none";
+creditPayment.style.display = "none";
+
+cashButton.addEventListener('click', clickCashButton);
+
+function clickCashButton(){
+  cashPayment.style.display = "block";
+  creditPayment.style.display = "none";
+}
+
+creditButton.addEventListener('click', clickCreditButton);
+
+function clickCreditButton(){
+  creditPayment.style.display = "block";
+  cashPayment.style.display = "none";
+}
 
 
 

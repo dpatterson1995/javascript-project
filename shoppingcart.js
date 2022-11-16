@@ -99,3 +99,44 @@ function purchase2(event) {
   let remove = document.getElementById("credit");
   remove.classList.remove("hide");
 }
+////Start -- Data loaded into Shopping Cart///
+
+
+function displayCartItems(){
+  let cartItems = localStorage.getItem("productsInCart");
+  cartItems = JSON.parse(cartItems);
+  let productContainer = document.querySelector("#shopping-cart-card2");
+  console.log(cartItems)
+  let cartCost = localStorage.getItem('totalCost');
+  let roundedCartCost = Math.round(100*cartCost)/100;
+  if ( cartItems && productContainer){
+      productContainer.innerHTML = '';
+      Object.values(cartItems).map(item => {
+       productContainer.innerHTML += `
+       <div class="product">
+      
+       <img src="images/${item.tag}">
+       <span>${item.name}</span>
+       </div>
+       <div class="quantity">${item.inCart}</div>  
+       <div class="total">$${item.inCart * item.price}</div>
+       `   
+      });
+
+      productContainer.innerHTML += `
+      <div class="basketTotalContainer">
+      <h4 class="basketTotalTitle">
+      Basket Total
+      </h4>
+      <h4 class="basketTotal">
+      $${roundedCartCost}
+      `
+
+  }
+
+}
+
+displayCartItems()
+
+
+////End -- Data loaded into Shopping Cart///

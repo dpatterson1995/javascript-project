@@ -283,13 +283,13 @@
           <section>
             <div class="cart-items" id="shopping-cart-card"></div>
 
-            <button class="btn btn-primary btn-purchase" type="button">
+            <button class="btn btn-primary btn-purchase" id="purchase-btn" type="button">
               Purchase
             </button>
             
-            <div>
-              <button id="cash" class="hide">Cash</button>
-              <button id="credit" class="hide">Credit</button>
+            <div id="payment-button-container">
+              <button id="cash" class="payment-button">Cash</button>
+              <button id="credit" class="payment-button">Credit</button>
             </div>
             <div id="result"></div>
           </section>
@@ -300,8 +300,9 @@
                 <!-- <input class="form-check-input" /> -->
       
                 <div id="cash-info">
-                  <label for="one">Amount Tendered</label>
-                  <input type="number" />
+                  <label for="one" class="payment-text">Amount Tendered</label>
+                  <input type="number" class="inputs" />
+                  <input type="submit" value="Submit" class="submit-btn"/>
                 </div>
               </div>
               <div id="creditForm" class="form-check">
@@ -309,19 +310,20 @@
                 <!-- <input class="form-check-input" /> -->
       
                 <div id="credit-info">
-                  <label for="one">Credit Card Number</label>
-                  <input type="number" maxlength="16" minlength="16" />
-                  <label for="one">Expiration Date</label>
+                  <label for="one" class="payment-text">Credit Card Number</label>
+                  <input type="number" class="inputs" maxlength="16" minlength="16" />
+                  <label for="one" class="payment-text">Expiration Date</label>
                   <input
                     type="month"
                     id="expiration-date"
+                    class="inputs"
                     name="expiration-date"
                     min="2022-11"
                     value="2022-12"
                   />
-                  <label for="one">CVV</label>
-                  <input type="number" minlength="3" maxlength="3" />
-                  <input type="submit" value="Submit" />
+                  <label for="one" class="payment-text">CVV</label>
+                  <input type="number" class="inputs inputs-cvv" minlength="3" maxlength="3" />
+                  <input type="submit" value="Submit" class="submit-btn"/>
                 </div>
               </div>
             </form>

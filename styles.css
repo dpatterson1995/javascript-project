@@ -22,9 +22,34 @@ body {
   display: flex;
 }
 
-#shopping-cart {
-  
+/* #shopping-cart {
+ 
 
+} */
+.btn-purchase {
+  margin: 10px;
+}
+
+#payment-button-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
+.payment-form-container {
+  display: flex;
+  text-align: center;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  
+}
+.payment-button {
+  background-color: gray;
+  color: white;
+  border-radius: 7px;
+  margin-top: 20px;
+  text-align: center;
+  width: 80px;
 }
 
 h1 {
@@ -54,6 +79,28 @@ img {
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0px 25px 40px #1687d933;
+}
+
+.payment-text {
+  color: black;
+  font-weight: 20px;
+  display: block;
+  padding: 7px;
+}
+
+.inputs {
+  border-radius: 5px;
+  border-width: 1px;
+}
+
+.inputs-cvv {
+  width: 70px;
+}
+
+.submit-btn {
+  margin: 15px;
+  display: block;
+  margin-left: 60px;
 }
 
 .closeIcon {

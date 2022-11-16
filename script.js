@@ -13,7 +13,7 @@ let products=[
    { 
     name: 'Dog Food', 
     category: 'Pet', 
-    price: 45,
+    price: 45.00,
     tag:'DOg.jpg', 
     salesTax: true, 
     inCart: 0

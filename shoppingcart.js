@@ -101,13 +101,6 @@ function purchase2(event) {
 }
 ////Start -- Data loaded into Shopping Cart///
 
-// let shoppingCartData = document.querySelector("#shopping-cart-card");
-
-// let shoppingCartDataClone = shoppingCartData.cloneNode(true);
-
-// shoppingCartDataClone.id = 'shoppingCartData';
-
-// shoppingCartData2.appendChild(shoppingCartDataClone);
 
 function displayCartItems(){
   let cartItems = localStorage.getItem("productsInCart");

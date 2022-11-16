@@ -1,4 +1,4 @@
-body {
+/* body {
   background-color: goldenrod;
 }
 section {
@@ -63,9 +63,9 @@ ul {
   }
 }
 /* Start -- Data loaded into Shopping Cart */
-img {
+/* img {
   width: 150px;
   height: 150px;
   border-radius: 50px;
 }
-/* End -- Data loaded into Shopping Cart */
+/* End -- Data loaded into Shopping Cart */ 

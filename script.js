@@ -144,6 +144,7 @@ function clickCreditButton() {
   creditPayment.style.display = "block";
   cashPayment.style.display = "none";
 }
+
 let cashSubmit2 = document.querySelector("#cashSubmit");
 cashSubmit2.addEventListener("click", cashSubmit);
 let total = 20;
@@ -160,3 +161,31 @@ function cashSubmit() {
     alert("Your Order Has Been Confirmed! You've Got Change!: $" + change);
   }
 }
+
+
+
+// let input = document.getElementById('credit-card-number')
+// let errorWarning = document.getElementById('error-warning');
+
+// input.addEventListener('input', checkCodeLength)
+
+// function checkCodeLength(){
+//   let enteredCodeLength = input.value.length;
+//   let maxLength = 16;
+
+//   if (enteredCodeLength === maxLength){
+//     errorWarning.hidden = false;
+//     input.classList.add('error')
+//   } else {
+//     errorWarning.hidden = true;
+//     input.classList.remove('error')
+//   }
+// }
+
+
+
+// onLoadCartNumbers();
+//  <img class="closeIcon" src="images/cancel_1.png">
+//  <div class="price">$${item.price}</div>
+//  <div class="quantity"><img class="leftArrow" src="images/leftarrow.jpeg"><span>${item.inCart}</span><img class="rightArrow" src="images/rightarrow.jpeg"></div>
+

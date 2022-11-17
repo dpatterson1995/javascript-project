@@ -144,9 +144,19 @@ function clickCreditButton() {
   creditPayment.style.display = "block";
   cashPayment.style.display = "none";
 }
-
-
-// onLoadCartNumbers();
-//  <img class="closeIcon" src="images/cancel_1.png">
-//  <div class="price">$${item.price}</div>
-//  <div class="quantity"><img class="leftArrow" src="images/leftarrow.jpeg"><span>${item.inCart}</span><img class="rightArrow" src="images/rightarrow.jpeg"></div>
+let cashSubmit2 = document.querySelector("#cashSubmit");
+cashSubmit2.addEventListener("click", cashSubmit);
+let total = 20;
+function cashSubmit() {
+  let change = 0;
+  let receiptTotalNumber = total;
+  if (parseInt(cashInput.value) < total) {
+    alert("Insufficient Funds.");
+  } else if (parseInt(cashInput.value) === receiptTotalNumber) {
+    alert("Your order has been Confirmed!");
+  } else if (parseInt(cashInput.value) > total) {
+    change = parseInt(cashInput.value) - total;
+    console.log(change);
+    alert("Your Order Has Been Confirmed! You've Got Change!: $" + change);
+  }
+}

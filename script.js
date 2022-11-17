@@ -145,6 +145,7 @@ function clickCreditButton() {
   cashPayment.style.display = "none";
 }
 
+
 // let input = document.getElementById('credit-card-number')
 // let errorWarning = document.getElementById('error-warning');
 
@@ -162,6 +163,7 @@ function clickCreditButton() {
 //     input.classList.remove('error')
 //   }
 // }
+
 
 
 // onLoadCartNumbers();

@@ -5,7 +5,8 @@ let products=[
      price: 1.99, 
      tag:'Bread.jpg',
      salesTax: false, 
-     inCart: 0
+     inCart: 0,
+     id: 1,
  },
     { 
      name: 'Dog Food', 
@@ -13,7 +14,8 @@ let products=[
      price: 45.00,
      tag:'DOg.jpg', 
      salesTax: true, 
-     inCart: 0
+     inCart: 0,
+     id: 2,
  },
     { 
      name: 'Ground Pork', 
@@ -21,7 +23,8 @@ let products=[
      price: 14.99,
      tag:'Beeef.jpg', 
      salesTax: false, 
-     inCart: 0
+     inCart: 0,
+     id: 3,
  },
     { 
      name: 'Milk', 
@@ -29,7 +32,8 @@ let products=[
      price: 2.99, 
      tag:'ilk.jpg',
      salesTax: false, 
-     inCart: 0
+     inCart: 0,
+     id: 4,
  },
  {
      name: 'Eggs',
@@ -37,7 +41,8 @@ let products=[
      price: 2.59,
      tag:'Eggs.jpg',
      salesTax: false,
-     inCart: 0
+     inCart: 0,
+     id: 5,
  },
  {
      name: 'Bananas',
@@ -45,15 +50,17 @@ let products=[
      price: 3.79,
      tag: 'Bana.jpg',
      salesTax: false,
-     inCart: 0
+     inCart: 0,
+     id: 6,
  },
  {
      name: 'Sushi',
      category: 'Protein',
      price: 8.99,
      tag:'Sush.jpg',
-     salesTax: false,
-     inCart: 0
+     salesTax: true,
+     inCart: 0,
+     id: 7,
  },
  {
      name: 'Yogurt',
@@ -61,7 +68,8 @@ let products=[
      price: 1.06,
      tag:'Yop.webp',
      salesTax: false,
-     inCart: 0
+     inCart: 0,
+     id: 8,
  },
  {
      name: 'Tofu',
@@ -69,7 +77,8 @@ let products=[
      price: 2.48,
      tag:'tofu_image.png',
      salesTax: false,
-     inCart: 0
+     inCart: 0,
+     id: 9,
  },
  {
      name: 'Carrots',
@@ -77,7 +86,8 @@ let products=[
      price: 0.79,
      tag:'carrots_image.png',
      salesTax: false,
-     inCart: 0
+     inCart: 0,
+     id: 10,
  }
  
  ]

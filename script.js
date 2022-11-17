@@ -35,6 +35,7 @@ function cartNumbers(product){
     }
 
     setItems(product);
+
 }
 
 function setItems(product) {

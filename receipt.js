@@ -15,6 +15,7 @@ function displayCartItems3(){
     console.log(cartItems)
     let cartCost = localStorage.getItem('totalCost');
     roundedCartCost = Math.round(100*cartCost)/100;
+    console.log(typeof(cartItems))
     if ( cartItems && productContainer){
         productContainer.innerHTML = '';
         Object.values(cartItems).map(item => {
@@ -48,8 +49,8 @@ function displayCartItems3(){
     let salesTaxTotal = 0;
     let salesTaxObject = document.querySelectorAll("#itemCostWTax");
     let productContainer2 = document.querySelector(".invoice-items");
-    console.log(productContainer2);
-    console.log(salesTaxObject);
+    console.log("productContainer2: "+ productContainer2);
+    console.log("salesTaxObject: "+ salesTaxObject);
     for (let i=0; i< salesTaxObject.length; i++){
         console.log("made it to the for loop")
         console.log(salesTaxObject[i].innerHTML);

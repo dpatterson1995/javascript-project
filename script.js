@@ -145,6 +145,25 @@ function clickCreditButton() {
   cashPayment.style.display = "none";
 }
 
+// let input = document.getElementById('credit-card-number')
+// let errorWarning = document.getElementById('error-warning');
+
+// input.addEventListener('input', checkCodeLength)
+
+// function checkCodeLength(){
+//   let enteredCodeLength = input.value.length;
+//   let maxLength = 16;
+
+//   if (enteredCodeLength === maxLength){
+//     errorWarning.hidden = false;
+//     input.classList.add('error')
+//   } else {
+//     errorWarning.hidden = true;
+//     input.classList.remove('error')
+//   }
+// }
+
+
 // onLoadCartNumbers();
 //  <img class="closeIcon" src="images/cancel_1.png">
 //  <div class="price">$${item.price}</div>

@@ -28,7 +28,9 @@ function displayCartItems3() {
                 }</td>
                 <td id="salesTax" class="alignright">${item.salesTax}</td>
                 <td id="itemCostWTax" class="alignright">${
-                  !item.salesTax ? 0 : 0.06 * item.inCart * item.price
+                  !item.salesTax
+                    ? item.inCart * item.price
+                    : 1.06 * item.inCart * item.price
                 }</td>
             </tr>
         </tbody></table>
@@ -42,33 +44,45 @@ function displayCartItems3() {
         </h4>
         <h4 class="basketTotal">
         $${roundedCartCost}
-       
-
         `;
   }
 }
 function displaySalesTaxTotal() {
+  let cartItems = localStorage.getItem("productsInCart");
+  cartItems = JSON.parse(cartItems);
   let salesTaxTotal = 0;
   let salesTaxObject = document.querySelectorAll("#itemCostWTax");
   let productContainer2 = document.querySelector(".invoice-items");
-  console.log(productContainer2);
-  console.log("Hello " + salesTaxObject[0].innerHTML);
-  for (let i = 0; i < salesTaxObject.length; i++) {
-    console.log("made it to the for loop");
-    console.log("Hi " + salesTaxObject[i].innerHTML);
-    // let salesTaxTotal2 = salesTaxTotal + salesTaxObject[i].innerHTML;
-    //     let subString = salesTaxTotal2.substring(2);
-    //     console.log(subString);
-    salesTaxTotal += parseFloat(salesTaxObject[i].innerHTML);
-    console.log(salesTaxTotal);
+  console.log("productContainer2: " + productContainer2);
+  console.log("salesTaxObject: " + salesTaxObject);
+  // for (let i=0; i< salesTaxObject.length; i++){
+  //     console.log("made it to the for loop")
+  //     console.log(salesTaxObject[i].innerHTML);
+  //     let salesTaxTotal2 = salesTaxTotal + salesTaxObject[i].innerHTML;
+  // //     let subString = salesTaxTotal2.substring(2);
+  // //     console.log(subString);
+  // salesTaxTotal += parseFloat(salesTaxTotal2);
+  // console.log(salesTaxTotal);
+  // };
+  for (let product of Object.values(cartItems)) {
+    if (product.salesTax) {
+      salesTaxTotal += product.inCart * product.price * 0.06;
+    }
   }
   let grandTotal = salesTaxTotal + roundedCartCost;
-  productContainer2.innerText += `
-
+  console.log(typeof salesTaxTotal);
+  productContainer2.innerHTML += `
+    <div class="alignright" id="basketTotalContainer">
+    <h4 class="alignright" id="basketTotalTitle">
+    
    Sales Tax
-    $${salesTaxTotal.toFixed(2)}
-
+   </h4>
+   <h4 class="basketTotal">
+    $${salesTaxTotal.toFixed(2)} 
+    <h4 class="alignright" id="basketTotalTitle">
     Grand Total
+    </h4>
+    <h4 class="basketTotal">
     $${grandTotal.toFixed(2)}
     `;
 }

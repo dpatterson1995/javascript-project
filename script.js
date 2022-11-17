@@ -145,6 +145,7 @@ function clickCreditButton() {
   cashPayment.style.display = "none";
 }
 
+
 // onLoadCartNumbers();
 //  <img class="closeIcon" src="images/cancel_1.png">
 //  <div class="price">$${item.price}</div>

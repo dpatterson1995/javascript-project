@@ -72,7 +72,9 @@
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
           </form>
         </div>
       </div>
@@ -90,7 +92,12 @@
           <img src="images/Bread.jpg" alt="" />
           <a href="#" class="card-link"></a>
           <!-- <input id="number" type="number" min="0" /> -->
-          <input type="button" value="Add to Cart" class="addToCart" data-id="1"/>
+          <input
+            type="button"
+            value="Add to Cart"
+            class="addToCart"
+            data-id="1"
+          />
         </div>
       </div>
 
@@ -106,7 +113,12 @@
           <img src="images/DOg.jpg" alt="" />
           <a href="#" class="card-link"></a>
           <!-- <input id="number" type="number" min="0" /> -->
-          <input type="button" value="Add to Cart" class="addToCart" data-id="2"/>
+          <input
+            type="button"
+            value="Add to Cart"
+            class="addToCart"
+            data-id="2"
+          />
         </div>
       </div>
 
@@ -122,7 +134,12 @@
           <img src="images/Beeef.jpg" alt="" />
           <a href="#" class="card-link"></a>
           <!-- <input id="number" type="number" min="0" /> -->
-          <input type="button" value="Add to Cart" class="addToCart" data-id="3"/>
+          <input
+            type="button"
+            value="Add to Cart"
+            class="addToCart"
+            data-id="3"
+          />
         </div>
       </div>
 
@@ -135,7 +152,12 @@
           <img src="images/ilk.jpg" alt="" />
           <a href="#" class="card-link"></a>
           <!-- <input id="number" type="number" min="0" /> -->
-          <input type="button" value="Add to Cart" class="addToCart" data-id="4"/>
+          <input
+            type="button"
+            value="Add to Cart"
+            class="addToCart"
+            data-id="4"
+          />
         </div>
       </div>
 
@@ -148,7 +170,12 @@
           <img src="images/Eggs.jpg" alt="" />
           <a href="#" class="card-link"></a>
           <!-- <input id="number" type="number" min="0" /> -->
-          <input type="button" value="Add to Cart" class="addToCart" data-id="5"/>
+          <input
+            type="button"
+            value="Add to Cart"
+            class="addToCart"
+            data-id="5"
+          />
         </div>
       </div>
 
@@ -161,7 +188,12 @@
           <img src="images/Bana.jpg" alt="" />
           <a href="#" class="card-link"></a>
           <!-- <input id="number" type="number" min="0" /> -->
-          <input type="button" value="Add to Cart" class="addToCart" data-id="6"/>
+          <input
+            type="button"
+            value="Add to Cart"
+            class="addToCart"
+            data-id="6"
+          />
         </div>
       </div>
 
@@ -178,7 +210,12 @@
           <img src="images/Sush.jpg" alt="" />
           <a href="#" class="card-link"></a>
           <!-- <input id="number" type="number" min="0" /> -->
-          <input type="button" value="Add to Cart" class="addToCart" data-id="7"/>
+          <input
+            type="button"
+            value="Add to Cart"
+            class="addToCart"
+            data-id="7"
+          />
         </div>
       </div>
 
@@ -194,7 +231,12 @@
           <img src="images/Yop.webp" alt="" />
           <a href="#" class="card-link"></a>
           <!-- <input id="number" type="number" min="0" /> -->
-          <input type="button" value="Add to Cart" class="addToCart" data-id="8"/>
+          <input
+            type="button"
+            value="Add to Cart"
+            class="addToCart"
+            data-id="8"
+          />
         </div>
       </div>
 
@@ -207,7 +249,12 @@
           <img src="images/tofu_image.png" alt="" />
           <span><a href="#" class="card-link"></a></span>
           <!-- <input id="number" type="number" min="0" /> -->
-          <input type="button" value="Add to Cart" class="addToCart" data-id="9"/>
+          <input
+            type="button"
+            value="Add to Cart"
+            class="addToCart"
+            data-id="9"
+          />
         </div>
       </div>
 
@@ -220,7 +267,12 @@
           <img src="images/carrots_image.png" alt="" />
           <span><a href="#" class="card-link"></a></span>
           <!-- <input id="number" type="number" min="0" /> -->
-          <input type="button" value="Add to Cart" class="addToCart" data-id="10"/>
+          <input
+            type="button"
+            value="Add to Cart"
+            class="addToCart"
+            data-id="10"
+          />
         </div>
       </div>
     </div>
@@ -231,7 +283,13 @@
           <section>
             <div class="cart-items" id="shopping-cart-card"></div>
 
-            <button class="btn btn-primary btn-purchase" id="purchase-btn" type="button">Purchase</button>
+            <button
+              class="btn btn-primary btn-purchase"
+              id="purchase-btn"
+              type="button"
+            >
+              Purchase
+            </button>
 
             <div id="payment-button-container">
               <button id="cash" class="payment-button">Cash</button>
@@ -248,8 +306,18 @@
                 <div id="cash-info">
                   <label for="one" class="payment-text">Amount Tendered</label>
 
-                  <input type="number" class="inputs" />
-                  <input type="submit" value="Submit" class="submit-btn" />
+                  <input
+                    id="cashInput"
+                    type="number"
+                    class="inputs"
+                    name="cashInput"
+                  />
+                  <input
+                    id="cashSubmit"
+                    type="submit"
+                    value="Submit"
+                    class="submit-btn"
+                  />
 
                 </div>
               </div>
@@ -258,17 +326,28 @@
                 <!-- <input class="form-check-input" /> -->
 
                 <div id="credit-info">
+
                   <label for="one" class="payment-text">Credit Card Number</label>
 
                   <input type="text" class="inputs" maxlength="16" minlength="16"/>
                   
 
+
                   <label for="one" class="payment-text">Expiration Date</label>
-                  <input type="month" id="expiration-date" class="inputs" name="expiration-date" min="2022-11" value="2022-12"/>
+                  <input
+                    type="month"
+                    id="expiration-date"
+                    class="inputs"
+                    name="expiration-date"
+                    min="2022-11"
+                    value="2022-12"
+                  />
                   <label for="one" class="payment-text">CVV</label>
+
 
                   <input type="text" class="inputs inputs-cvv" minlength="3" maxlength="3" />
                   <input type="submit" value="Submit" class="submit-btn"/>
+
 
                 </div>
               </div>
